@@ -62,4 +62,7 @@ RUN chmod -R 755 /opt/browsers \
 
 COPY --from=builder /usr/bin/google-maps-scraper /usr/bin/
 
+EXPOSE 8080
+VOLUME ["/gmapsdata"]
 ENTRYPOINT ["google-maps-scraper"]
+CMD ["-web", "-data-folder", "/gmapsdata", "-c", "2"]
