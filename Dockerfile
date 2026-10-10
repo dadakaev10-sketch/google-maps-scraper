@@ -31,6 +31,7 @@ ENV PLAYWRIGHT_DRIVER_PATH=/opt/ms-playwright-go
 
 # Install only the necessary dependencies in a single layer
 RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl \
     ca-certificates \
     libnss3 \
     libnspr4 \
